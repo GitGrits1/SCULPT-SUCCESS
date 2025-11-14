@@ -1,0 +1,165 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to bottom, #023E8A 0%, #BF6E2D 75%);
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   HERO HEADER
+========================= */
+.hero {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  margin: 40px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #F4A261;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.hero-img {
+  width: 66.66%; /* 2/3 of header */
+  object-fit: cover;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.header-text {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.header-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 10px 0;
+  line-height: 1.1;
+}
+
+.header-text p {
+  font-size: 1.1rem;
+  margin: 10px 0 0 0;
+  line-height: 1.4;
+}
+
+/* =========================
+   CONTENT GRID
+========================= */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 80%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+/* Center last row if fewer items */
+.content-grid > .content-box:nth-last-child(-n+2) {
+  justify-self: center;
+}
+
+/* =========================
+   CONTENT BOXES
+========================= */
+.content-box {
+  background-color: #F4A261; /* same as header box */
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.content-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Logo circle */
+.content-box .logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #7e3304b4;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+}
+
+.content-box h2 {
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Hidden content with fade-in */
+.content-box .content-hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 10px;
+  line-height: 1.5;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.content-box:hover .content-hidden {
+  opacity: 1;
+  max-height: 500px; /* enough to show content */
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  margin: 50px 0;
+  color: #000;
+}
+
+footer .icon {
+  width: 35px;
+  margin: 0 12px;
+  transition: transform 0.3s;
+}
+
+footer .icon:hover {
+  transform: scale(1.2);
+}
+  /* Presentation link */
+  .presentation-link {
+    color: #023E8A;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .presentation-link:hover {
+    text-decoration: underline;
+  }
+</style>
